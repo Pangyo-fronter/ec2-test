@@ -15,7 +15,7 @@ function App() {
     
     axios({
       method: 'GET',
-      url: 'http://localhost:5000/test'
+      url: '/test'
     })
     .then(res => setGetData(JSON.stringify(res.data)));
   }
@@ -24,7 +24,7 @@ function App() {
     e.preventDefault();
     axios({
       method: 'POST',
-      url: 'http://localhost:5000/test',
+      url: '/test',
       data: { greeting: value },
       headers: {
         'Content-Type': 'application/json',
